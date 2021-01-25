@@ -1,7 +1,14 @@
 public class WaterBottle {
 
-    int volume = 100;
-    int curWater = 100;
+    // Init variables
+    int volume;
+    int curWater;
+
+    // Constructor.
+    public WaterBottle(int volume, int curWater){
+        this.volume   = volume;
+        this.curWater = curWater;
+    }
 
     // Removes 10 water from current water in bottle.
     public void drink(){ curWater -= 10; }

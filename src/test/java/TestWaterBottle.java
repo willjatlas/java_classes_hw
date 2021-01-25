@@ -9,7 +9,7 @@ public class TestWaterBottle {
 
     @Before
     public void before(){
-        this.waterBottle = new WaterBottle();
+        this.waterBottle = new WaterBottle(100, 70);
     }
 
     @Test
@@ -18,9 +18,14 @@ public class TestWaterBottle {
     }
 
     @Test
+    public void hasCurWater(){
+        assertEquals(70, waterBottle.curWater);
+    }
+
+    @Test
     public void canDrink(){
         waterBottle.drink();
-        assertEquals(90, waterBottle.curWater);
+        assertEquals(60, waterBottle.curWater);
     }
 
     @Test
